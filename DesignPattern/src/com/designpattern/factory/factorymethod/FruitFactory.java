@@ -1,16 +1,20 @@
 package com.designpattern.factory.factorymethod;
 
 public class FruitFactory {
-	public static Fruit getInstance(String fruitName){
-		if(null == fruitName){
+	public Fruit getInstance(String fruitType){
+		if(null == fruitType){
 			return null;
 		}
-		if("Apple".equals(fruitName)){
+		if("Apple".equals(fruitType)){
 			return Apple.getInstance();
-		}else if("Pear".equals(fruitName)){
+		}else if("Pear".equals(fruitType)){
 			return Pear.getInstance();
-		}else if("Banana".equals(fruitName)){
+		}else if("Banana".equals(fruitType)){
 			return Banana.getInstance();
+		}else if("Watermelon".equals(fruitType)){
+			return Watermelon.getInstance();
+		}else if("Mango".equals(fruitType)){
+			return Mango.getInstance();
 		}
 		return null;
 	}

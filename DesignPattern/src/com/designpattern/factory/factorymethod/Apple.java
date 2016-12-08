@@ -6,13 +6,11 @@ package com.designpattern.factory.factorymethod;
  * 但正因为是在类装载时初始化才会产生垃圾对象，从而浪费内存
  * 同时它证明不是懒装载（lazy load）的，没有达到lazy loading的效果
  * 
- * @author condibear
  */
 public class Apple implements Fruit{
 	private static final Apple apple = new Apple();
 	
-	private Apple() {
-	}
+	private Apple() {}
 
 	public static Apple getInstance(){
 		return apple;
